@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-03-2020 a las 21:28:35
+-- Tiempo de generación: 30-03-2020 a las 09:36:25
 -- Versión del servidor: 10.1.35-MariaDB
 -- Versión de PHP: 7.1.21
 
@@ -133,8 +133,18 @@ CREATE TABLE `productos` (
   `color` varchar(32) NOT NULL,
   `made_in` varchar(64) NOT NULL,
   `precio` float NOT NULL,
-  `descuento` int(11) NOT NULL
+  `descuento` int(11) NOT NULL,
+  `tallas` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `nombre`, `stock`, `fecha_compra`, `color`, `made_in`, `precio`, `descuento`, `tallas`) VALUES
+(1, 'zapatillas nike', 3, '2019-12-10', '#938323', 'France', 23, 10, 'S,M'),
+(2, 'pantalones levis', 12, '2020-01-14', '#0403AA', 'China', 100, 0, 'S,M,XL'),
+(3, 'zapatillas adidas', 3, '2020-03-09', '#938300', 'China', 120.5, 33, 'S');
 
 -- --------------------------------------------------------
 
@@ -206,7 +216,7 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `tallas`
